@@ -17,6 +17,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import IconDiscord from "../components/icons/IconDiscord";
 
 const mainnet = [1, 2, 3];
 const activeTestnets = [1, 2, 3, 4];
@@ -128,13 +133,13 @@ export default function Home() {
           }}
         >
           <Container maxWidth="lg">
-        <Typography variant="h2" component="h1" align="center"
+        <Typography variant="h3" component="h1" align="center"
               color="text.primary"
               gutterBottom>
           Planemo Validators
         </Typography>
 
-        <Typography variant="h3" component="h2" align="center" color="text.primary"
+        <Typography variant="h4" component="h2" align="center" color="text.primary"
               gutterBottom>
           Site is temporarily on maintenance
         </Typography>
@@ -158,24 +163,29 @@ export default function Home() {
       </TabPanel>
       </Box>
 
-      <Typography variant="h3" component="h2" align="center" color="text.primary"
+      <Typography variant="h4" component="h2" align="center" color="text.primary"
               gutterBottom>
         Contacts
         </Typography>
 
-        <div>
-          <a href="https://twitter.com/bitcoinduke">Twitter</a>
-          <br/>
-          <a href="https://t.me/mikhail_shu">Telegram</a> 
-          <br/>
-          <a href="MikeSh#8650">Discord</a>
-        </div>
+        <Stack direction="row" justifyContent="center" spacing={2}>
+        <IconButton href="https://twitter.com/bitcoinduke" aria-label="Twitter">
+          <TwitterIcon fontSize="large"/>
+        </IconButton>
+        <IconButton href="https://t.me/mikhail_shu" aria-label="Telegram">
+          <TelegramIcon fontSize="large"/>
+        </IconButton>
+        <IconButton href="MikeSh#8650" aria-label="Discord">
+          <IconDiscord/>
+        </IconButton>
+        </Stack>
+
         </Container>
         </Box>
       </main>
 
       <footer className={styles.footer}>
-          Powered by Planemo Std
+      &copy; 2022 Powered by Planemo Std
       </footer>
     </ThemeProvider>
   )
