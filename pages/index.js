@@ -23,9 +23,52 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import IconDiscord from "../components/icons/IconDiscord";
 
-const mainnet = [1, 2, 3];
-const activeTestnets = [1, 2, 3, 4];
-const pastTestnets = [1, 2, 3, 4, 5];
+
+const mainnet = [{
+  link: "https://main.explorer.agoric.net/validator/agoricvaloper1hp9hr2dguyhjuu9perrjxdg0e36j5fufc6l4ev",
+  name: "Agoric",
+  icon: "/icons/agoric.png",
+  fee: "10%",
+  caption: "Delegate to Us.\n10% fee"
+}, {
+  link: "https://polkadot.js.org/apps/?rpc=wss://rpc-01.snakenet.hydradx.io",
+  address: "7L6rgJNHxGgZJnrmt5fPjxAWjTNeEHu4JRVRPBjyDuYuUVCW",
+  name: "HydraDx",
+  icon: "/icons/hydradx.png",
+  fee: "2%",
+  caption: "Stake with us.\n2% fee\n7L6rgJNHxGgZJnrmt5fPjxAWjTNeEHu4JRVRPBjyDuYuUVCW"
+}];
+
+const activeTestnets = [
+  {
+    link: "https://www.validators.app/validators/HJtQMXJznWcPLuWzsFxyoLoosCPZcuAeLtd41nBng6j3?locale=en&network=testnet&order=&refresh=",
+    name: "Solana",
+    icon: "/icons/solana.jpeg"
+  },
+  {
+    link: "https://testnet.ironfish.network/users/397",
+    name: "Ironfish",
+    icon: "/icons/ironfish.jpeg"
+  }
+];
+
+const pastTestnets = [
+  {
+    link: "",
+    name: "Agoric",
+    icon: "/icons/agoric.png"
+  },
+  {
+    link: "",
+    name: "Mina",
+    icon: "/icons/mina.png"
+  },
+  {
+    link: "",
+    name: "Casper",
+    icon: "/icons/casper.jpg"
+  }
+];
 
 
 function TabPanel(props) {
@@ -67,27 +110,25 @@ function NodesGrid(props) {
   return (
     <Grid container spacing={4}>
     {nodes.map((card) => (
-      <Grid item key={card} xs={12} sm={6} md={4}>
+      <Grid item key={card['name']} xs={12} sm={6} md={4}>
         <Card
           sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
         >
           <CardMedia
             component="img"
-            image="https://source.unsplash.com/random"
-            alt="random"
+            image={card['icon']}
+            alt="icon"
           />
           <CardContent sx={{ flexGrow: 1 }}>
             <Typography gutterBottom variant="h5" component="h2">
-              Heading
+              {card['name']}
             </Typography>
             <Typography>
-              This is a media card. You can use this section to describe the
-              content.
+              {card['caption']}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">View</Button>
-            <Button size="small">Edit</Button>
+            <Button href={card['link']} target='_blank' size="small">View</Button>
           </CardActions>
         </Card>
       </Grid>
