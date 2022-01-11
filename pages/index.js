@@ -55,6 +55,11 @@ const activeTestnets = [
 const pastTestnets = [
   {
     link: "",
+    name: "Umee",
+    icon: "/icons/umee.jpeg"
+  },
+  {
+    link: "",
     name: "Agoric",
     icon: "/icons/agoric.png"
   },
