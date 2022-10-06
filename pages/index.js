@@ -25,24 +25,29 @@ import IconDiscord from "../components/icons/IconDiscord";
 
 
 const mainnet = [{
-  link: "https://main.explorer.agoric.net/validator/agoricvaloper1hp9hr2dguyhjuu9perrjxdg0e36j5fufc6l4ev",
-  name: "Agoric",
-  icon: "/icons/agoric.png",
-  fee: "10%",
-  caption: "Delegate to Us.\n10% fee"
-}, {
-  link: "https://polkadot.js.org/apps/?rpc=wss://rpc-01.snakenet.hydradx.io",
-  address: "7L6rgJNHxGgZJnrmt5fPjxAWjTNeEHu4JRVRPBjyDuYuUVCW",
-  name: "HydraDx",
-  icon: "/icons/hydradx.png",
-  fee: "2%",
-  caption: "Stake with us.\n2% fee\n7L6rgJNHxGgZJnrmt5fPjxAWjTNeEHu4JRVRPBjyDuYuUVCW"
-}];
+  link: "",
+  address: "",
+  name: "SUI",
+  icon: "/icons/sui.jpg",
+  caption: "Coming Soon..."
+  },
+  {
+  link: "https://massa.net/testnet/A15bPzx3yZLziGNsv9UVUqJBNCvp9N6grwrt3JNv5ghs94zuXZC",
+  address: "A15bPzx3yZLziGNsv9UVUqJBNCvp9N6grwrt3JNv5ghs94zuXZC",
+  name: "Massa Network",
+  icon: "/icons/massa.jpeg",
+  caption: "Coming Soon..."
+  }];
 
 const activeTestnets = [
   {
-    link: "https://www.validators.app/validators/HJtQMXJznWcPLuWzsFxyoLoosCPZcuAeLtd41nBng6j3?locale=en&network=testnet&order=&refresh=",
-    name: "Solana",
+    link: "https://solana.org/sfdp-validators/EvDnGZpca3pWC4tW94U4PUkruVUkq7PUgpVWpDfx6fxV",
+    name: "Solana Validator I",
+    icon: "/icons/solana.jpeg"
+  },
+  {
+    link: "https://solana.org/sfdp-validators/HJtQMXJznWcPLuWzsFxyoLoosCPZcuAeLtd41nBng6j3",
+    name: "Solana Validator II",
     icon: "/icons/solana.jpeg"
   },
   {
@@ -72,6 +77,38 @@ const pastTestnets = [
     link: "",
     name: "Casper",
     icon: "/icons/casper.jpg"
+  },
+  {
+  link: "",
+  name: "HydraDx",
+  icon: "/icons/hydradx.png",
+  caption: "Address\n7L6rgJNHxGgZJnrmt5fPjxAWjTNeEHu4JRVRPBjyDuYuUVCW"
+  },
+  {
+    link: "",
+    name: "Meson Network",
+    icon: "/icons/meson.png"
+  },
+  {
+    link: "",
+    name: "Evmos",
+    icon: "/icons/evmos.png"
+  },
+  {
+    link: "",
+    name: "HOPR",
+    icon: "/icons/hopr.jpg"
+  },
+  {
+    link: "",
+    name: "Subquery",
+    icon: "/icons/subquery.jpg"
+  },
+  {
+  link: "",
+  name: "Kyve Protocol Node",
+  icon: "/icons/kyve.jpeg",
+  caption: "Address\nkyve1f9gf5rm5c5tg4zp764dyfr7ayyfmjr5pcusk9g"
   }
 ];
 
